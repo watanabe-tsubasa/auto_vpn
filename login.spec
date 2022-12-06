@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(
-    ['script.py'],
+    ['login.py'],
     pathex=[],
     binaries=[(r'C:\Users\341137\src\driver\chromedriver.exe', './driver')],
     datas=[],
@@ -28,7 +28,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='script',
+    name='login',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

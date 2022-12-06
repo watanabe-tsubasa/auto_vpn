@@ -9,7 +9,7 @@ import pyautogui as pgui
 
 # selenium と bs4 でonetime-passwordを取得
 
-driver_path = process.env.DRIVER_PATH
+driver_path = r'C:\Users\341137\src\driver\chromedriver.exe'
 
 def resource_path(relative_path):
     try:
@@ -52,7 +52,7 @@ subprocess.Popen(r'C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility
 
 time.sleep(0.5)
 
-pgui.press('tab')
+# pgui.press('tab')
 pgui.press('enter')
 
 time.sleep(3)
