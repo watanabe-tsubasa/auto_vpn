@@ -4,6 +4,7 @@ import time
 import sys
 import os
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 import subprocess
 import pyautogui as pgui
 
@@ -18,7 +19,8 @@ def resource_path(relative_path):
         base_path = os.path.dirname(__file__)
     return os.path.join(base_path, relative_path)
 
-driver = webdriver.Chrome(resource_path(driver_path))
+service = Service(executable_path=resource_path(driver_path))
+driver = webdriver.Chrome(service=service)
 driver.get('https://sotp.whitecloud.jp/ivpn.otp00098.ultina/ui/token.php')
 
 title = driver.title

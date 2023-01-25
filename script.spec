@@ -7,7 +7,7 @@ block_cipher = None
 a = Analysis(
     ['script.py'],
     pathex=[],
-    binaries=[(r'C:\Users\341137\src\driver\chromedriver.exe', './driver')],
+    binaries=[],
     datas=[],
     hiddenimports=[],
     hookspath=[],
