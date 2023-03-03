@@ -5,12 +5,15 @@ import sys
 import os
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 import subprocess
 import pyautogui as pgui
 
 # selenium と bs4 でonetime-passwordを取得
 
 driver_path = r'C:\Users\341137\src\driver\chromedriver.exe'
+options = Options()
+options.add_argument('--headless')
 
 def resource_path(relative_path):
     try:
@@ -20,7 +23,7 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 service = Service(executable_path=resource_path(driver_path))
-driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome(service=service, options=options)
 driver.get('https://sotp.whitecloud.jp/ivpn.otp00098.ultina/ui/token.php')
 
 title = driver.title
